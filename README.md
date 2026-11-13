@@ -1,0 +1,1 @@
+Covering the fundamentals of HTML, CSS, and JavaScript.
