@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!--
+    🧠 PROJECT TITLE: Community Event Signup
+
+    ✅ WHAT YOU ARE PRACTICING (HTML Essentials)
+    - HTML Structure (doctype, html, head, body)
+    - Meta Tags & SEO (charset, viewport, description, keywords, author)
+    - Headings + Paragraphs
+    - Divs + Spans (grouping + styling hooks)
+    - Lists (ul/ol)
+    - Tables (table, thead, tbody, tr, th, td)
+    - Forms + User Input (form, label, input, select, textarea, button)
+
+    🎯 PROJECT GOAL
+    Build an event info + signup page that practices structure, SEO meta tags, headings, lists, a schedule table, and a complete form with multiple input types.
+-->
+<html lang="en">
+  <head>
+    <!-- STEP 1 — Add your basic meta tags -->
+    <!--
+      Inside <head>, add:
+      1) <meta charset="UTF-8"> ✅
+      2) <meta name="viewport" content="width=device-width, initial-scale=1.0"> ✅
+      3) <title>...</title> (use a title that matches this project) ✅
+      4) <meta name="description" content="..."> (short: 1–2 sentences) ✅
+      5) <meta name="keywords" content="..."> (comma-separated keywords) ✅
+      6) <meta name="author" content="..."> ✅
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Local community events for the Harrisburg, Pennsylvania area">
+    <meta name="keywords" content="community, event, meeting, meetup, networking, register, harrisburg, pennsylvania, PA, digital summit, AI, cybersecurity">
+    <meta name="author" content="lilanthim">
+    <title>PA Digital Summit Event Sign-up</title>
+
+    <!-- STEP 2 — Link your CSS file (optional but recommended) -->
+    <!--
+      Add: <link rel="stylesheet" href="styles.css"> ✅
+      Even if the focus is HTML, a tiny bit of CSS helps you *see* your structure.
+    -->
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+  </head>
+  <body>
+    <!-- STEP 3 — Create a semantic page layout -->
+    <!--
+      Create the main layout using semantic tags:
+      - <header> for the top section ✅
+      - <main> for the main content ✅
+      - <footer> for the bottom section ✅
+      Tip: Wrap everything in a <div class="page"> if you want a single container. ✅
+    -->
+    <div class="page">
+
+    <!-- STEP 4 — Header (Event title + details) -->
+    <!--
+      In <header>, add:
+      - <h1> for the event name ✅
+      - A <p> with date + location ✅
+      - Use a <span> inside the paragraph to highlight the city or date ✅
+    -->
+      <header>
+        <h1>PA Digital Summit</h1>
+        <p>Date: Wednesday, November 18, 2026 (8:30 A.M. - 12:00 P.M.)</p>
+        <p>Location: <span style="background-color: yellow;">One N 2nd St, Downtown Harrisburg</span></p>
+      </header>
+    
+    <!-- STEP 5 — Main section A (Event highlights list) -->
+    <!--
+      Add a <section class="card"> with:
+      - <h2>Event Highlights</h2> ✅
+      - A <ul> list of 5 highlights ✅
+      - A <p class="small"> note explaining why lists are useful ✅
+    -->
+      <main>
+        <section class="card">
+          <h2>Event Highlights</h2>
+          <ul>
+            <li>Smart city technology and digital infrastructure innovations</li>
+            <li>AI and data-driven solutions for local governments</li>
+            <li>Cybersecurity and protecting public-sector data</li>
+            <li>Improving public services through digital transformation</li>
+            <li>Networking with Pennsylvania technology and government leaders</li>
+          </ul>
+          <p class="small">Lists help organize information into a clear and easy to read format</p>
+        </section>
+
+    <!-- STEP 6 — Main section B (Schedule table) -->
+    <!--
+      Add another <section class="card"> with:
+      - <h2>Schedule</h2> ✅
+      - A <table> with columns: Time / Activity / Notes (Description) ✅
+      - Include 4 rows in the schedule ✅
+    -->
+        <section class="card">
+          <h2>Schedule</h2>
+          <table border="1">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Activity</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>8:30 A.M. - 9:00 A.M.</td>
+                <td>Registration & Networking</td>
+                <td>Meet attendees and connect with industry professionals.</td>
+              </tr>
+
+              <tr>
+                <td>9:00 A.M. - 10:00 A.M.</td>
+                <td>AI & Smart Communities</td>
+                <td>Explore how AI can improve local government services.</td>
+              </tr>
+
+              <tr>
+                <td>10:00 A.M. - 11:00 A.M.</td>
+                <td>Cybersecurity & Digital Infrastructure</td>
+                <td>Discuss data protection and secure digital systems.</td>
+              </tr>
+
+              <tr>
+                <td>11:00 A.M. - 12:00 P.M.</td>
+                <td>Digital Transformation & Closing</td>
+                <td>Discover technology solutions for more connected communities.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+    <!-- STEP 7 — Main section C (Signup form) -->
+    <!--
+      Add another <section class="card"> with:
+      - <h3>Signup</h3>
+      - A <form> that includes:
+        1) Full name (text) ✅
+        2) Email (email) ✅
+        3) Ticket type (select) ✅
+        4) Dietary preference (radio buttons) ✅
+        5) Agree to terms (checkbox) ✅
+        6) Message (textarea) ✅
+        7) Submit button ✅
+    -->
+        <section class="card">
+          <h3>Sign-up</h3>
+          <form>
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" placeholder="e.g. Jane Doe" required>
+            <br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="e.g. jane@example.com" required>
+            <br>
+
+            <label for="ticket">Select a Ticket Type:</label>
+            <select id="ticket" required>
+              <option value="" selected disabled>Choose One</option>
+              <option value="early-nonprofit" disabled>Early Bird Non-Profit/Government - $55.20 (Sales Ended)</option>
+              <option value="early-corporate" disabled>Early Bird Corporate - $71.21 (Sales Ended)</option>
+              <option value="nonprofit">Non-Profit/Government - $71.21</option>
+              <option value="corporate">Corporate - $87.21</option>
+            </select>
+            <br>
+            <br>
+            <!-- 2026-11-12 end -->
+
+            <!-- 2026-11-13 start -->
+            <!-- https://www.w3.org/WAI/tutorials/forms/grouping/ -->
+            <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/radio -->
+            <fieldset>
+              <legend>Dietary Preference:</legend>
+              
+              <input type="radio" id="none" name="dietary-pref" required>
+              <label for="none">None</label>
+              <br>
+              
+              <input type="radio" id="vegetarian" name="dietary-pref" required>
+              <label for="vegetarian">Vegetarian</label>
+              <br>
+
+              <input type="radio" id="vegan" name="dietary-pref" required>
+              <label for="vegan">Vegan</label>
+              <br>
+
+              <input type="radio" id="gluten-free" name="dietary-pref" required>
+              <label for="gluten-free">Gluten-free</label>
+              <br>
+            </fieldset>
+            <br>
+
+            <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/textarea -->
+            <label for="message">Additional Comments</label>
+            <br>
+            <textarea rows="8" cols="64" id="message" placeholder="Enter any questions or comments here (optional)."></textarea>
+            <br>
+            <br>
+
+            <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/checkbox -->
+            <input type="checkbox" id="terms" required>
+            <label for="terms">I agree to the Terms and Conditions.</label>
+            <br>
+
+            <button type="submit">Sign Up</button>
+          </form>
+        </section>
+      
+      </main>
+    <!-- STEP 8 — Footer (Mini SEO checklist) -->
+    <!--
+      In <footer>, add an <ol> checklist with 3 SEO reminders: ✅
+      - Title is clear
+      - Meta description exists
+      - Headings are in order
+    -->
+      <footer>
+        <hr>
+        <p>SEO reminders:</p>
+        <ol>
+          <li>Title is clear</li>
+          <li>Meta description exists</li>
+          <li>Headings are in order</li>
+        </ol>
+      </footer>
+
+    <!-- STEP LAST — Validate your HTML -->
+    <!--
+      Quick self-check:
+      Do you have ONLY ONE <h1>? ✅
+      Are your headings in order? (h1 → h2 → h3) ✅
+      Does every <label> connect to an input using for="..." and id="..."? ✅
+      Does your table have <thead> and <tbody>? ✅
+      Did you use BOTH a list and a table somewhere? ✅
+      Did you use a <span> to style a *small* piece of text inside a bigger element? ✅
+    -->
+    </div>
+  </body>
+</html>
