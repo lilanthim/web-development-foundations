@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+    <style>
+      button:hover {
+        background-color: lightblue;
+      }
+
+      input:focus {
+        border: 3px solid red;
+      }
+
+      li:nth-child(odd) {
+        background-color: lightpink;
+      }
+
+      li:nth-child(4) {
+        color: orange;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button>Hover over me</button>
+    <br>
+
+    <input type="text" placeholder="Click here">
+    <br>
+
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+    </ul>
+  </body>
+</html>

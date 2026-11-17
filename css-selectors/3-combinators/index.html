@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinators</title>
+    <style>
+      /* descendant combinator */
+      /* selects all <p> elements inside <div>, at any nesting level */
+      /* div p {
+        color: green;
+      } */
+
+      /* child combinator (direct children only) */
+      /* selects <p> elements that are direct children of a <div> */
+      /* div > p {
+        color: blue;
+      } */
+
+      /* adjacent sibling combinator */
+      /* selects the first <p> immediately following an <h2> */
+      /* h2 + p {
+        color: purple;
+      } */
+
+      /* general sibling combinator */
+      /* selects all <p> elements following an <h2> with the same parent */
+      h2 ~ p {
+        color: darkmagenta;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- descendant combinator -->
+    <!-- <div>
+      <p>This paragraph is inside a div</p>
+    </div>
+    <p>This paragraph is not inside a div</p>
+    <br> -->
+
+    <!-- child combinator -->
+    <!-- <div>
+      <p>This paragraph is a direct child</p>
+      <section>
+        <p>This paragraph is not a direct child</p>
+      </section>
+    </div>
+    <br> -->
+
+    <!-- adjacent sibling combinator -->
+    <!-- <h2>Heading</h2>
+    <p>This is selected</p>
+    <p>This is not selected</p>
+    <p>This is not selected</p>
+    <br> -->
+
+    <!-- general sibling combinator -->
+    <h2>Heading</h2>
+    <p>First paragraph</p>
+    <p>Second paragraph</p>
+  </body>
+</html>

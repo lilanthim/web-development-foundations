@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Selectors</title>
+    <style>
+      /* universal selector */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: red;
+      }
+
+      /* type selector */
+      h2 {
+        color: darkblue;
+        font-size: 24px;
+      }
+      label {
+        color: darkgoldenrod;
+      }
+
+      /* class selector */
+      .highlight {
+        background-color: yellow;
+        font-weight: bold;
+      }
+
+      /* id selector */
+      /* apply style to a single element that is unique */
+      #unique-text {
+        font-style: italic;
+      }
+
+      /* attribute selector */
+      /* select input elements based on their type attribute */
+      input[type="text"] {
+        border: 2px solid violet;
+      }
+      input[type="password"] {
+        border: 2px dashed blueviolet; 
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <h1>Heading 1</h1>
+      <p>Paragraph</p>
+      <br>
+
+      <h2>Heading 2</h2>
+      <p>Paragraph</p>
+      <br>
+
+      <h2>Another Heading</h2>
+      <p class="highlight">Highlighted Paragraph</p>
+      <p>Normal Paragraph</p>
+      <br>
+      <p>Boring Paragraph</p>
+      <p id="unique-text">Unique Paragraph</p>
+      <p>Boring Paragraph</p>
+      <br>
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" placeholder="e.g. user123">
+      <br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="e.g. pass123">
+    </main>
+  </body>
+</html>
